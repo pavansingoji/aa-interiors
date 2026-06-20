@@ -11,6 +11,8 @@
   --gold: #c9a24b;
   --gold-bright: #e0bd6e;
   --bronze: #8b6f3f;
+  --navy: #1c2541;
+  --navy-deep: #11182c;
   --ink-soft: #6b6259;
   --line: rgba(28,26,24,0.10);
   --line-light: rgba(250,247,242,0.14);
@@ -313,7 +315,10 @@ p{ margin:0; }
    Section heads (shared)
 =================================================================== */
 .section-head{ max-width: 640px; margin: 0 auto 56px; text-align:center; }
+.section-head .eyebrow{ color: var(--navy); }
+.section-head .eyebrow-line{ background: var(--navy); }
 .section-head.light .eyebrow, .section-head.light h2{ color: var(--warm-white); }
+.section-head.light .eyebrow-line{ background: var(--gold-bright); }
 .section-head h2{ font-size: clamp(2rem, 3.6vw, 2.8rem); margin: 6px 0 16px; color: var(--charcoal); }
 .section-sub{ color: var(--ink-soft); font-size: 1.02rem; }
 .section-sub.left{ margin-top:-4px; }
@@ -324,6 +329,8 @@ section{ padding: 110px 0; }
    About
 =================================================================== */
 .about{ background: var(--warm-white); padding-top: 100px; }
+.about-copy .eyebrow{ color: var(--navy); }
+.about-copy .eyebrow-line{ background: var(--navy); }
 .about-grid{
   display:grid; grid-template-columns: 0.9fr 1.1fr; gap: 80px; align-items:center;
 }

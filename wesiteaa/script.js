@@ -40,7 +40,7 @@
 
   /* ---------- Active nav link on scroll ---------- */
   var navLinks = document.querySelectorAll(".nav-link");
-  var sections = ["home","projects","gallery","about","contact"].map(function(id){ return document.getElementById(id); });
+  var sections = ["home","projects","gallery","about"].map(function(id){ return document.getElementById(id); });
   function updateActiveNav(){
     var y = window.scrollY + 140;
     var current = sections[0];
@@ -113,7 +113,7 @@
 
   function applyReveal(){
     document.querySelectorAll(
-      ".about-media, .about-copy, .project-card, .why-card, .section-head, .contact-form-wrap, .contact-side"
+      ".about-media, .about-copy, .project-card, .why-card, .section-head"
     ).forEach(function(el){
       el.classList.add("reveal");
       revealObserver.observe(el);
@@ -265,20 +265,5 @@
     resetTestiTimer();
   });
   resetTestiTimer();
-
-  /* ---------- Contact form (client-side demo handling) ---------- */
-  var form = document.getElementById("contactForm");
-  var formNote = document.getElementById("formNote");
-  form.addEventListener("submit", function(e){
-    e.preventDefault();
-    if (!form.checkValidity()){
-      formNote.textContent = "Please fill in all required fields.";
-      formNote.classList.remove("success");
-      return;
-    }
-    formNote.textContent = "Thank you! Our design team will call you within 24 hours.";
-    formNote.classList.add("success");
-    form.reset();
-  });
 
 })();
