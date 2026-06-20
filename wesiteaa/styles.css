@@ -722,6 +722,24 @@ section{ padding: 110px 0; }
 .back-to-top:hover{ background: var(--gold); color: var(--charcoal); }
 
 /* ===================================================================
+   WhatsApp floating button
+=================================================================== */
+.whatsapp-float{
+  position: fixed; bottom: 92px; right: 26px; z-index: 900;
+  width: 54px; height: 54px; border-radius: 50%;
+  background: #25D366; color: #fff;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow: 0 8px 22px -6px rgba(0,0,0,0.45);
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+}
+.whatsapp-float:hover{ transform: translateY(-3px) scale(1.06); box-shadow: 0 14px 28px -6px rgba(0,0,0,0.5); }
+
+@media (max-width: 480px){
+  .back-to-top{ width:44px; height:44px; right:18px; bottom:18px; }
+  .whatsapp-float{ width:48px; height:48px; right:20px; bottom:74px; }
+}
+
+/* ===================================================================
    Scroll-reveal utility
 =================================================================== */
 .reveal{ opacity:0; transform: translateY(28px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
