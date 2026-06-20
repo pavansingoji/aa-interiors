@@ -154,10 +154,9 @@
     toShow.forEach(function(item, idx){
       var fig = document.createElement("figure");
       fig.className = "masonry-item";
-      fig.setAttribute("data-size", item.size);
       fig.setAttribute("data-cat", item.cat);
       fig.innerHTML =
-        '<img src="' + item.src + '" alt="' + item.title + ' — AA Interiors" loading="lazy" width="800" height="' + (item.size === "tall" ? "1100" : item.size === "short" ? "560" : "800") + '">' +
+        '<img src="' + item.src + '" alt="' + item.title + ' — AA Interiors" loading="lazy" width="800" height="800">' +
         '<div class="masonry-caption"><span>' + item.label + '</span><strong>' + item.title + '</strong></div>' +
         '<span class="masonry-zoom">&#8599;</span>';
       fig.addEventListener("click", function(){ openLightbox(filtered, idx); });
